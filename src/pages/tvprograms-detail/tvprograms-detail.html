@@ -1,0 +1,41 @@
+<!--
+  Generated template for the TvprogramsDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+  -->
+<ion-header>
+
+  <ion-navbar class="">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title class="ion-title">
+      {{program.name}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="content-detail" padding>
+  <span>
+    <ion-buttons>
+      <button ion-button color="primary" clear large (click)="optionYesterday()">Ayer</button>
+      <button ion-button color="primary" clear large (click)="optionToday()">Hoy</button>
+      <button ion-button color="primary" clear large (click)="optionTomorrow()">Mañana</button>
+    </ion-buttons>
+  </span>
+  <ion-card class="card-detail" *ngFor="let detail of details">
+    <ion-card-content class="card-content">
+      <ion-card-title>{{detail.name}}</ion-card-title>
+      <p>
+        <b>Horario: </b> {{detail.horario}}
+      </p>
+      <p>
+        <b>Información: </b> {{detail.informacion}}
+      </p>
+      <button ion-button clear medium color="danger" icon-start>
+        <ion-icon name="alarm"></ion-icon> Programar</button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

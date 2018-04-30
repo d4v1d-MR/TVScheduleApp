@@ -1,3 +1,26 @@
+.toolbar-title-md{
+  color:black;
+}
 page-home {
+  .page-home {
+    background-color: rgb(70, 70, 70);
+  }
+  ion-card {
+    position: relative;
+    text-align: center;
+    height: 30%;
+  }
 
+  .card-title {
+    position: absolute;
+    top: 36%;
+    font-size: 1.5em;
+    width: auto;
+    color: #fff;
+    background: rgba(black,0.7);
+    font-weight: bold;
+    border-radius: 15px;
+    right:25%;
+    left:25%;
+  }
 }

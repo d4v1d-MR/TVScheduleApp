@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar class="">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title secondary *ngFor="let detail of details">
+      {{detail.name}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="details-content" padding>
+  <ion-card class="details-card" *ngFor="let detail of details">
+    <cl-image public-id="{{detail.img}}.jpg">
+      <cl-transformation height="784" width="550" crop="scale">
+
+      </cl-transformation>
+    </cl-image>
+    <ion-card-content>
+      <ion-card-title>
+        {{detail.name}}
+      </ion-card-title>
+      <p>
+        <b>Director: </b> {{detail.director}}
+        <br>
+        <b>Duración: </b> {{detail.duracion}}
+        <br>
+        <b>Año: </b> {{detail.year}}
+        <br>
+        <b>Tag: </b> {{detail.tag}}
+        <br>
+        <b>Reparto: </b> {{detail.actores}}
+        <br>
+        <b>Sinopsis: </b> {{detail.sinopsis}}
+      </p>
+    </ion-card-content>
+    <ion-row no-padding>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start click="addFavorito()">
+          <ion-icon name="star"></ion-icon>
+          Favoritos
+        </button>
+      </ion-col>
+      <ion-col>
+        <button ion-button clear small color="danger" icon-start>
+          <ion-icon name="eye"></ion-icon>
+          Ver más tarde
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+</ion-content>
