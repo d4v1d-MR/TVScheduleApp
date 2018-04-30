@@ -1,0 +1,8 @@
+{
+  "name": "TVScheduleApp",
+  "app_id": "a23e00bb",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
